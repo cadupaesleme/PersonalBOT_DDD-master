@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF4DC734-288F-47B8-AC64-50F3BCAA4BC0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PersonalBot.Services.ConsoleApp</RootNamespace>
+    <AssemblyName>PersonalBot.Services.ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=4.1.1.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.1.1\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=13.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telegram.Bot.13.4.0\lib\net45\Telegram.Bot.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bot.cs" />
+    <Compile Include="Conversa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleInjectorInitializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PersonalBot.Application\PersonalBot.Application.csproj">
+      <Project>{2f58204e-0f92-410d-abe5-612e02383d68}</Project>
+      <Name>PersonalBot.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonalBot.CrossCutting.IoC\PersonalBot.CrossCutting.IoC.csproj">
+      <Project>{d26ab7d6-7825-4cd5-a5fb-efcf91020559}</Project>
+      <Name>PersonalBot.CrossCutting.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonalBot.Domain\PersonalBot.Domain.csproj">
+      <Project>{5c4e0de2-4120-4d53-9650-d6d5cc97d382}</Project>
+      <Name>PersonalBot.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagens\Afundos.jpg" />
+    <Content Include="imagens\AgachamentoBarra.jpg" />
+    <Content Include="imagens\Antebracos.jpg" />
+    <Content Include="imagens\BomDia.jpg" />
+    <Content Include="imagens\Capturar.PNG" />
+    <Content Include="imagens\CrunchDeclinado.jpg" />
+    <Content Include="imagens\Cruxifixo.jpg" />
+    <Content Include="imagens\Curl.jpg" />
+    <Content Include="imagens\CurlHalteres.jpg" />
+    <Content Include="imagens\CurlMartelo.jpg" />
+    <Content Include="imagens\ElevacaoFrontal.jpg" />
+    <Content Include="imagens\ElevacaoLateral.jpg" />
+    <Content Include="imagens\Encolhimento.jpg" />
+    <Content Include="imagens\Esteira.jpg" />
+    <Content Include="imagens\ExtensaoBarra.jpg" />
+    <Content Include="imagens\Flexao.jpg" />
+    <Content Include="imagens\Fundos.jpg" />
+    <Content Include="imagens\Hiperextensao.jpg" />
+    <Content Include="imagens\leg.jpg" />
+    <Content Include="imagens\MaquinaExtensora.jpg" />
+    <Content Include="imagens\MaquinaFlexora.jpg" />
+    <Content Include="imagens\PeckDeck.jpg" />
+    <Content Include="imagens\PressMilitar.jpg" />
+    <Content Include="imagens\PulloverBarra.jpg" />
+    <Content Include="imagens\PuxadaDorsais.jpg" />
+    <Content Include="imagens\remada.jpg" />
+    <Content Include="imagens\RemadaVertical.jpg" />
+    <Content Include="imagens\seated-dumbbell-kickback.jpg" />
+    <Content Include="imagens\SupinoDeclinado.jpg" />
+    <Content Include="imagens\SupinoInclinado.jpg" />
+    <Content Include="imagens\SupinoReto.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
